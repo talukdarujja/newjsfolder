@@ -313,14 +313,100 @@
 
 // Example: sumPassingMarks([35, 50, 70, 20, 80]) → 200
 
-function sumPassingMarks(marks, passMark = 40) {
-    sum=0;
-    for(let i=0;i<marks.length;i++) {
-        if(marks[i]<passMark) {
-            continue;
-        }
-        sum+=marks[i];
+// function sumPassingMarks(marks, passMark = 40) {
+//     sum=0;
+//     for(let i=0;i<marks.length;i++) {
+//         if(marks[i]<passMark) {
+//             continue;
+//         }
+//         sum+=marks[i];
+//     }
+//     return sum;
+// }
+// console.log(sumPassingMarks([35,50,70,20,80]));
+
+
+// function countpositive(numbers) {
+//     count=0;
+//     for(let i=0;i<numbers.length;i++) {
+//         if(numbers[i]==0 || numbers[i]<0) {
+//             continue;
+//         }
+//         count++;
+//     }
+//     return count;
+// }
+// console.log(countpositive([-2,5,0,8,-1,-10]));
+
+
+// function firstzero(numbers) {
+//      index=-1;
+//     for(let i=0;i<numbers.length;i++) {
+//         if(numbers[i]==0) {
+//             index=i;
+//             return index;
+//             break;
+//         }
+//     }
+//     return index;
+// }
+// console.log(firstzero([4,7,2,0,8,0]));
+
+// function avg(numbers) {
+//     sum=0;
+//     avg=0;
+//     for(let i=0;i<numbers.length;i++) {
+//         sum+=numbers[i];
+//     }
+//     avg=sum/numbers.length;
+//     return avg;
+// }
+// console.log(avg([10,20,30,40]));
+
+// function max(numbers) {
+//     largest=numbers[0];
+//     for(let i=0;i<numbers.length;i++) {
+//         if(numbers[i]>largest) {
+//             largest=numbers[i];
+//         }
+//     }
+//     return largest;
+// }
+// console.log(max([12,23,90,89,78]));
+
+// function containsnum(number,target) {
+//     found=false;
+//     for(let i=0;i<number.length;i++) {
+//         if(number[i]==target) {
+//             found=true;
+//             break;
+//         }
+//     } 
+//     return found;
+// }
+// console.log(containsnum([4,8,15,16],15));
+
+function pal(numbers) {
+    result=false;
+    for(let i=0;i<numbers.length;i++) {
+        if(numbers[i]==numbers[numbers.length-1-i])
+            result=true;
+        break;
     }
-    return sum;
+    return result;
 }
-console.log(sumPassingMarks([35,50,70,20,80]));
+console.log(pal([1,2,3,2,1]));
+
+function disc(price,discount=10) {
+    total=0;
+    disco=0;
+    if(disco<0 || disco>100) {
+        return price;
+    }
+    disco=(price*discount)/100;
+
+    total=price-disco;
+    return total;
+
+}
+console.log(disc(500,9024));
