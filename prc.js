@@ -167,5 +167,3 @@ function countUntilNegative(numbers) {
 }
 console.log(countUntilNegative([5, 8, 0, 10, 7, -2, 20]));
 
-// 1. Login With Maximum Attempts
-
